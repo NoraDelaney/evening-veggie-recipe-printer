@@ -1,0 +1,19 @@
+<%# run from command line: erb -T - erb.conf template.erb
+https://www.ruby-forum.com/topic/230424 %>
+
+#=================================#
+# Recipe: <%= recipe[:name] %>
+#=================================#
+
+Ingredients
+----------
+<% recipe[:ingredients].each do |ingredient| %>
+<%= ingredient -%>
+<% end %>
+
+
+Directions
+----------
+<% recipe[:directions].each do |direction| %>
+<%= count +=1 -%>. <%= direction -%>
+<% end %>
